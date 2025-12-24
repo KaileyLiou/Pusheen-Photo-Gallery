@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusheen Photo Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="title">Pusheen Quiz</h1>
+    <h4 class="subtitle">Take this quiz to see how much you know about Pusheen, the cat!</h4>
+
+    <div class="question-section">
+        <p class="question">1. When is Pusheen's birthday?</p>
+
+        <label>
+            <input type="radio" name="q1" value="January 1"> January 1
+        </label><br>
+            
+        <label>
+            <input type="radio" name="q1" value="June 21"> June 21
+        </label><br>
+            
+        <!-- ans -->
+        <label>
+            <input type="radio" name="q1" value="February 18"> February 18
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="March 14"> March 14
+        </label><br>
+
+    </div>
+
+    <div class="question-section">
+        <p class="question">2. What is Pusheen's best feature?</p>
+
+        <label>
+            <input type="radio" name="q1" value="Her chubby belly"> Her chubby belly
+        </label><br>
+            
+        <label>
+            <input type="radio" name="q1" value="Her tiny triangle ears"> Her tiny triangle ears
+        </label><br>
+            
+        <label>
+            <input type="radio" name="q1" value="Her talent for napping"> Her talent for napping
+        </label><br>
+        
+        <!-- ans -->
+        <label>
+            <input type="radio" name="q1" value="Her toes look like beans"> Her toes look like beans
+        </label><br>
+
+    </div>
+
+    <div class="question-section">
+        <p class="question">3. What is the name of Pusheen's sister?</p>
+
+        <!-- ans -->
+        <label>
+            <input type="radio" name="q1" value="Stormy"> Stormy
+        </label><br>
+            
+        <label>
+            <input type="radio" name="q1" value="Pip"> Pip
+        </label><br>
+            
+        <label>
+            <input type="radio" name="q1" value="Sunflower"> Sunflower
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="Biscuit"> Biscuit
+        </label><br>
+
+    </div>
+
+    <div class="question-section">
+        <p class="question">4. What does Pusheen love doing the most?</p>
+
+        <label>
+            <input type="radio" name="q1" value="Exercising"> Exercising
+        </label><br>
+            
+        <label>
+            <input type="radio" name="q1" value="Cleaning"> Cleaning
+        </label><br>
+            
+        <!-- ans -->
+        <label>
+            <input type="radio" name="q1" value="Snacking"> Snacking
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="Reading"> Reading
+        </label><br>
+
+    </div>
+
+    <div class="question-section">
+        <p class="question">5. What is Pusheen's favorite food?</p>
+
+        <label>
+            <input type="radio" name="q1" value="Pizza"> Pizza
+        </label><br>
+            
+        <label>
+            <input type="radio" name="q1" value="Donuts"> Donuts
+        </label><br>
+            
+        <label>
+            <input type="radio" name="q1" value="Bacon"> Bacon
+        </label><br>
+
+        <label>
+            <input type="radio" name="q1" value="All of the above"> All of the above
+        </label><br>
+
+    </div>
+
+    <button class="submit-button" onclick="checkQuiz()">Submit</button>
+
+    <p id="result"></p>
+
+    <button class="quiz-button">Restart</button>
+    <a href="index.html"><button class="quiz-button">Return Home</button></a>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
