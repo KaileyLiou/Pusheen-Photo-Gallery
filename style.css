@@ -172,3 +172,8 @@ a {
 .fact-section button:active {
     transform: scale(0.95);
 }
+
+p {
+    font-family: "Merienda", cursive;
+    color: #ff6666;
+}
