@@ -248,3 +248,8 @@ p {
         opacity: 0;
     }
 }
+
+::selection {
+    background: #ffcccc;
+    color: #fff;
+}
