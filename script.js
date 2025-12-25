@@ -62,4 +62,40 @@ document.addEventListener("DOMContentLoaded", () => {
             factDisplay.textContent = facts[randomIndex];
         });
     }
+
+    const images = document.querySelectorAll(".gallery img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("close-lightbox");
+
+    if (images.length && lightbox && lightboxImg && closeBtn) {
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+                document.body.style.overflow = "hidden";
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.style.display = "none";
+            document.body.style.overflow = "auto";
+        };
+
+        closeBtn.addEventListener("click", closeLightbox);
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    }
+
 });
