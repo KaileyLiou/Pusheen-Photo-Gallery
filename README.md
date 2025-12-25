@@ -1,3 +1,3 @@
 # Pusheen Photo Gallery
 
-This is a simple website made with HTML, CSS, and JavaScript that 
+A simple Pusheen-themed website with a fun photo gallery, a random fun facts generator, and a short interactive quiz. Built with HTML, CSS, and JavaScript.

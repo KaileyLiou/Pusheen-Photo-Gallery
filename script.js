@@ -11,32 +11,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitButton = document.getElementById("submit-button");
     const resultDisplay = document.getElementById("result");
 
-    submitButton.addEventListener("click", () => {
-        let score = 0;
-        for (let key in answers) {
-            const selected = document.querySelector(`input[name="${key}"]:checked`);
-            if (selected && selected.value === answers[key]) {
-                score++;
+    if (submitButton && resultDisplay) {
+        submitButton.addEventListener("click", () => {
+            let score = 0;
+
+            for (let key in answers) {
+                const selected = document.querySelector(`input[name="${key}"]:checked`);
+                if (selected && selected.value === answers[key]) {
+                    score++;
+                }
             }
-        }
 
-        resultDisplay.textContent = `You got ${score} out of 5 correct!`;
+            resultDisplay.textContent = `You got ${score} out of 5 correct!`;
 
-        if (score === 5) {
-            confetti({
-                particleCount: 150,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
-        }
-    });
+            if (score === 5 && typeof confetti === "function") {
+                confetti({
+                    particleCount: 150,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }
+        });
+    }
 
     const restartButton = document.querySelector(".restart-button");
-    restartButton.addEventListener("click", () => {
-        const allRadios = document.querySelectorAll('input[type="radio"]');
-        allRadios.forEach(radio => radio.checked = false);
-        resultDisplay.textContent = "";
-    });
+    if (restartButton && resultDisplay) {
+        restartButton.addEventListener("click", () => {
+            const allRadios = document.querySelectorAll('input[type="radio"]');
+            allRadios.forEach(radio => radio.checked = false);
+            resultDisplay.textContent = "";
+        });
+    }
 
     const facts = [
         "Pusheen's birthday is February 18!",
@@ -51,8 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const factButton = document.getElementById("fact-button");
     const factDisplay = document.getElementById("pusheen-fact");
 
-    factButton.addEventListener("click", () => {
-        const randomIndex = Math.floor(Math.random() * facts.length);
-        factDisplay.textContent = facts[randomIndex];
-    });
+    if (factButton && factDisplay) {
+        factButton.addEventListener("click", () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factDisplay.textContent = facts[randomIndex];
+        });
+    }
 });
