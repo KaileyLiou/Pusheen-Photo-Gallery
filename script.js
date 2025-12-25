@@ -98,4 +98,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const heart = document.getElementById("heart");
+
+    images.forEach(img => {
+        img.addEventListener("click", (e) => {
+            heart.style.left = e.clientX + "px";
+            heart.style.top = e.clientY + "px";
+            heart.style.opacity = "1";
+
+            heart.style.animation = "none";
+            heart.offsetHeight;
+            heart.style.animation = "pop 0.6s ease";
+
+            setTimeout(() => {
+                heart.style.opacity = "0";
+            }, 1000);
+        });
+    });
+
 });
