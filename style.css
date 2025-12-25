@@ -37,7 +37,7 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-.quiz-button {
+.quiz-button, .restart-button {
     background: #ff6666;
     color: #fff;
     border: none;
@@ -79,11 +79,11 @@ a {
     font-size: 1.5em;
 }
 
-.quiz-button:hover {
+.quiz-button:hover, .restart-button:hover {
     transform: scale(1.05);
 }
 
-.quiz-button:active {
+.quiz-button:active, .restart-button:active {
     transform: scale(0.95);
 }
 
@@ -124,4 +124,51 @@ a {
     transition: transform 0.3s ease;
     font-family: "Merienda", cursive;
     margin-top: 20px;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 1.3em;
+    font-family: "Merienda", cursive;
+    color: #ff6666;
+}
+
+.fact-section {
+    margin-top: 60px;
+}
+
+.fact-section h3 {
+    font-family: "Merienda", cursive;
+    color: #ff6666;
+    font-size: 2.5em;
+}
+
+.fact-section p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-family: "Merienda", cursive;
+    color: #ff6666;
+}
+
+.fact-section button {
+    background: #ff9999;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    font-family: "Merienda", cursive;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.fact-section button:hover {
+    transform: scale(1.05);
+}
+
+.fact-section button:active {
+    transform: scale(0.95);
 }
