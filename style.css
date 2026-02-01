@@ -253,3 +253,13 @@ p {
     background: #ffcccc;
     color: #fff;
 }
+
+button:focus, .quiz-button:focus, .restart-button:focus, .submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #ff6666;
+}
+
+a:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #ff6666;
+}
